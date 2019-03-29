@@ -1,0 +1,7 @@
+- Compare the runtime as before:
+runtime for mandelbrot_1.py ---> 137,64 seconds
+runtime for mandelbrot_3.py --->  11,03 seconds
+
+- Can you think of any advantages/disadvantages to using Numba instea of Numpy?
+
+We observe that numba runs our code approximately 10 times faster than our basic mandelbrot_1 code. Numba provides a huge advantage when used to compile our code as a whole, however it is unable to translate pyobject to any datatype. The latter would seem to be the only advantage Numpy has over Numba.

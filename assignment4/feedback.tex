@@ -1,0 +1,212 @@
+\documentclass[a4paper]{article}
+
+% Import some useful packages
+\usepackage[margin=0.5in]{geometry} % narrow margins
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\usepackage[cache=false]{minted}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\definecolor{LightGray}{gray}{0.95}
+
+\title{Peer-review of assignment 4 for \textit{INF3331-espenaf}}
+\author{Reviewer 1, markuslh, {markuslh@student.matnat.uio.no}}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+\subsection{Goal}
+The main goal of this review is to provide \textbf{constructive feedback and advice} on how to improve the solution. 
+
+\subsection{Guidelines}\label{sec:general_review}
+You, the peer-review team, can decide how you organise the peer-review work between you. For instance, you can work as a team, writing all report together, or you can split the work and write each one report. 
+
+For each (coding) exercise, one should review the following points:
+
+\begin{itemize}
+  \item Is the code \textbf{working as expected}? For non-internal functions (in particular for scripts that are run from the command-line), does the program handle invalid inputs sensibly?
+  \item Is the code \textbf{well documented}? Are there docstrings and are the useful?
+  \item Is the code written in \textbf{Pythonic way} \footnote{https://www.python.org/dev/peps/pep-0020/}? Is the code easy to read? Are the variable/class/function names sensible? Do you find overuse of classes or not sufficient use of functions or classes? Are there parts of the program that are hard to understand? 
+  \item Can you find \textbf{unnecessarily complicated parts} of the program? If so, suggest an improved implementation.
+  \item List the programming parts that are not answered.
+\end{itemize}
+Use (shortened) code snippets where appropriate to show how to improve the solution. 
+
+\subsection{Points}
+The review is completed by pushing the review Latex source file (.tex files) and the compiled PDF files to the repository of the students that are reviewed. The name of the files should be \emph{feedback.tex} and \emph{feedback.pdf} in the students assignment4 directory.
+
+You will get up to 10 points for delivering the peer-reviews. Each of you should contribute to the review roughly equivalently - your team will get the same number of points\footnote{In case a team-member does not contribute, please email \href{mailto:simon@simula.no}{simon@simula.no}}. 
+
+
+%\subsection{Useful Latex snippets}
+%Here are some sample usage of Latex.
+%
+%\subsubsection{Sample code}
+%\begin{minted}[bgcolor=LightGray, linenos, fontsize=\footnotesize]{python}
+%import sys
+%print "This is a sample code"
+%sys.exit(0)
+%\end{minted}
+%
+%\subsubsection{Mathematical equation}
+%\begin{align}
+%2 \pi > 6
+%\end{align}
+
+
+
+
+
+\section{Review}\label{sec:review}
+
+%\textbf{TODO:} Specify the system (Python version, operating system, ...) that was used for the review.
+
+This review was made on Ubuntu 18.04.1 LTS with Python 3.6.6.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Assignment 4.1}
+%\textbf{TODO:} Add a review based on section \ref{sec:general_review}.
+
+\subsubsection*{Is the code working as expected?}
+
+The code works as described. However it wouldnt give me the picture in .jpg-format as described by \texttt{--help}
+By adding some default values the program would also be easier to run
+\begin{minted}[bgcolor=LightGray, fontsize=\footnotesize]{python}
+\end{minted}
+
+\subsubsection*{Is the code well documented?}
+
+Good docstrings.
+
+\subsubsection*{Is the code written in Pythonic way?}
+
+The code seems to be well written with good variables and not too dense.
+
+\subsubsection*{Can you find unnecessarily complicated parts of the program?}
+
+Nothing out of the ordinary, seems fine.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Assignment 4.2} \label{sec:assignment5.2}
+%\textbf{TODO:} Add a review based on section \ref{sec:general_review}. In addition, review the following assignment specific items: 
+
+\subsubsection*{Is the code working as expected?}
+
+As for Assignment 4.1
+
+\subsubsection*{Is the code well documented?}
+
+As for Assignment 4.1.
+
+\subsubsection*{Is the code written in Pythonic way?}
+
+As for Assignment 4.1.
+
+\subsubsection*{Can you find unnecessarily complicated parts of the program?}
+
+No.
+
+\subsubsection*{Is numpy being used effectively (i.e. vectorization where possible)?}
+
+Vectorization seems good.
+
+\subsubsection*{Does the report match the output when run?:}
+\begin{itemize}
+	\item Report on runtime (\texttt{report2.txt}) with parameters used and comparison to mandelbrot\_1 and/or mandelbrot\_2 is actually a bit faster on my computer but thats probably because of different hardware. The two seem to be close to equally fast and not much time has been saved with numpy here
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Assignment 4.3}
+%\textbf{TODO:} Add a review based on section \ref{sec:general_review}. 
+
+\subsubsection*{Is the code working as expected?}
+
+As for Assignment 4.1. Numba increases the overall speed significantly
+
+\subsubsection*{Is the code well documented?}
+
+As for Assignment 4.1.
+
+\subsubsection*{Is the code written in Pythonic way?}
+
+As for Assignment 4.1.
+
+\subsubsection*{Can you find unnecessarily complicated parts of the program?}
+
+No.
+
+\subsubsection*{Does the report match the output when run?:}
+\begin{itemize}
+	\item Report on runtime (\texttt{report3.txt}) with parameters used are much faster compared to mandelbrot\_1 and mandelbrot\_2
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Assignment 4.4}
+
+Not delivered.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Assignment 4.5}
+%\textbf{TODO:} Add a review based on section \ref{sec:general_review}. 
+
+\subsubsection*{Is the code working as expected?}
+
+The UI works as described. Suggestions for improvements:
+\begin{itemize}
+	\item As for assignment 4.1 maybe adding some default values so the program could run without having to input values would be nice
+	\item Maybe giving some help as to how to run the program without having to type \texttt{--help} could be useful, but not needed
+\end{itemize}
+
+\subsubsection*{Is the code well documented?}
+
+Good docstring and well documented.
+
+\subsubsection*{Is the code written in Pythonic way?}
+
+Seems pythonic.
+
+\subsubsection*{Can you find unnecessarily complicated parts of the program?}
+
+No but maybe import packages could be an alternative as some of the code is re-used throughout \texttt{mandelbrot_1-3.py}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Assignment 4.6}
+
+\subsubsection*{Is the code working as expected?}
+File submitted but no code found.
+
+
+%\textbf{TODO:} Add a review based on section \ref{sec:general_review}.  In addition, review the following assignment specific items: 
+\subsubsection*{Does the setup.py script install the module/package containing the ``compute\_mandelbrot'' function?}
+No.
+\subsubsection*{Are the tests well designed and do they have a meaningful name?}
+NA.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Assignment 4.7}
+Delivered---the comments for assignment 4.1 apply.
+
+\subsection*{Assignment 4.8}
+\texttt{repeat\_good()} Clever usage of \texttt{.title()}. Concise.
+\texttt{repeat\_bad()} Unnecessary amount oc computing spent on the modulus-calculation, nice and ugly.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{General feedback}
+%\textbf{TODO:} Use this section to give general feedback about the solution such as advice for improved programming or documentation style.
+
+\begin{itemize}
+	\item Overall nice solutions and readable code which makes it easier to follow what happens inside the program itself
+	\item More intuitive help when starting program
+	\item Default values to run program if run with no user-input
+\end{itemize}
+
+\bibliographystyle{plain}
+\bibliography{literature}
+
+\end{document}

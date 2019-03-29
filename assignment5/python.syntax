@@ -1,0 +1,10 @@
+"#.*(?:$|\n)": comment
+"def\s(?:(\s*))(?=(?:[^"]*"[^"]*")*[^"]*$)": function_def
+"class(?:(\s*))(?=(?:[^"]*"[^"]*")*[^"]*$)": class_def
+"("{1})([^"].+)("{1})": string_catch
+"(?<!(\w))\s*import\s(?=(?:[^"]*"[^"]*")*[^"]*$)": import_catch
+"(True|False|None)(?=(?:[^"]*"[^"]*")*[^"]*$)": special_statement
+"(?<!([\[\(\w]))(\w+)(?=(\s*=))(?=(?:[^"]*"[^"]*")*[^"]*$)": var_assignment
+"(try|except)(?:(\s*))": try_except
+"while(?=(\s*[\(].*[\)]))": while_loop
+"(if|elif|else)(?=(?:[^"]*"[^"]*")*[^"]*$)": if_elif_else

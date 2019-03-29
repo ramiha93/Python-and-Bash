@@ -1,0 +1,10 @@
+comment: 1;30
+function_def: 0;31
+class_def: 0;32
+string_catch: 0;33
+import_catch: 0;34
+special_statement: 0;35
+var_assignment: 0;36
+try_except: 1;31
+while_loop: 1;33
+if_elif_else: 1;35

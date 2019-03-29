@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <div>
+      <a href="/temp">temp</a>
+      <a href="/co2">co2</a>
+      <a href="/bycountry">bycountry</a>
+    </div>
+    <div>
+      <form action="/co2" type="GET">
+        <input type="number" name="startYear" >
+        <input type="number" name="endYear" >
+        <input type="number" name="y_axis_min" >
+        <input type="number" name="y_axis_max" >
+        <input type="submit" value="Plot Graph" >
+      </form>
+      {% if image %}
+        <img src="{{ url_for('static', filename=image) }}" />
+      {% endif %}
+    </div>
+  </body>
+</html>

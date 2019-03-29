@@ -1,0 +1,20 @@
+- How much is gained by switching to numpy?
+
+Vectorization was applied once and not much time has been cut down
+from doing so (about 9 seconds). The double for-loop itself doesn't
+spend much time (I'd say about 10-15 seconds). It is the following code
+that consumes much time:
+"vmandel_res = vmandelbrot(complex_list, maxiter)" line 79
+
+
+- Parameters used to generate the image:
+
+I ran the code through mandelbrot.py (exercise 4.5) and this is
+what I wrote in the terminal:
+>>python mandelbrot.py -2.0 1.0 -1.0 1.0 1000 result.jpg
+
+
+- Runtime for each script:
+
+runtime for mandelbrot_1.py ---> 137,64 seconds
+runtime for mandelbrot_2.py ---> 128,51 seconds

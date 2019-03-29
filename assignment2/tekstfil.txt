@@ -1,0 +1,54 @@
+
+
+START 16:21:57
+LABEL Tracking: track1
+STOP 16:22:05
+
+START 16:25:27
+LABEL Tracking: track1
+STOP 16:25:37
+
+START 16:26:45
+LABEL Tracking: track11
+STOP 16:26:56
+
+START 16:28:15
+LABEL Tracking: track22
+STOP 16:28:26
+
+START 16:32:04
+LABEL Tracking: track33
+STOP 16:32:13
+
+START 16:35:03
+LABEL Tracking: track44
+STOP 16:35:10
+
+START 16:35:41
+LABEL Tracking: track45
+STOP 16:35:57
+
+START 16:37:33
+LABEL Tracking: track55
+STOP 16:37:50
+
+START 16:37:59
+LABEL Tracking: track56
+STOP 16:38:07
+
+START 16:38:14
+LABEL Tracking: track57
+STOP 16:38:20
+
+START 16:39:03
+LABEL Tracking: track1
+STOP 16:39:11
+
+START 16:39:17
+LABEL Tracking: track2
+STOP 16:39:23
+
+START 16:39:29
+LABEL Tracking: track3
+STOP 16:39:35
+
